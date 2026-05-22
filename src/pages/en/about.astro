@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout lang="en" title="About | Jumpei Yamagishi" switchPath="/ja/about/">
+  <section>
+    <div class="section-header">
+      <h2>About</h2>
+      <div class="prose">
+        <h1>About</h1>
+        <p>I am a theoretical biophysicist working on cellular metabolism, microbial ecosystems, and biological regulation.</p>
+        <p>My work combines nonequilibrium statistical physics, mathematical biology, and economic theory to understand biological systems as constrained dynamical systems.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="meta">April 2024 – Present</div>
+        <h3>Special Postdoctoral Researcher, RIKEN, Japan</h3>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Education</h2>
+      <div>
+        <div class="item"><div class="meta">March 2024</div><h3>Ph.D. in Arts and Sciences, The University of Tokyo</h3><p>Advisors: Kunihiko Kaneko and Shuji Ishihara.</p></div>
+        <div class="item"><div class="meta">March 2021</div><h3>Master in Arts and Sciences, The University of Tokyo</h3></div>
+        <div class="item"><div class="meta">March 2019</div><h3>Bachelor in Arts and Sciences, The University of Tokyo</h3></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a> · <a href={site.links.scholar}>Google Scholar</a> · <a href={site.links.github}>GitHub</a> · <a href={site.links.orcid}>ORCiD</a></p>
+    </div>
+  </section>
+</BaseLayout>

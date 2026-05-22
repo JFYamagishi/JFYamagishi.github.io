@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout lang="ja" title="プロフィール | 山岸 純平" switchPath="/en/about/">
+  <section>
+    <div class="section-header">
+      <h2>About</h2>
+      <div class="prose">
+        <h1>プロフィール</h1>
+        <p>細胞代謝、微生物生態系、生物制御を研究する理論生物物理学者です。</p>
+        <p>非平衡統計物理学、数理生物学、経済理論を組み合わせ、生物システムを制約された力学系として理解することを目指しています。</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="meta">2024年4月 – 現在</div>
+        <h3>理化学研究所 基礎科学特別研究員</h3>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Education</h2>
+      <div>
+        <div class="item"><div class="meta">2024年3月</div><h3>東京大学 総合文化研究科 博士</h3><p>指導教員: 金子邦彦、石原秀至。</p></div>
+        <div class="item"><div class="meta">2021年3月</div><h3>東京大学 総合文化研究科 修士</h3></div>
+        <div class="item"><div class="meta">2019年3月</div><h3>東京大学 教養学部 学士</h3></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a> · <a href={site.links.scholar}>Google Scholar</a> · <a href={site.links.github}>GitHub</a> · <a href={site.links.orcid}>ORCiD</a></p>
+    </div>
+  </section>
+</BaseLayout>

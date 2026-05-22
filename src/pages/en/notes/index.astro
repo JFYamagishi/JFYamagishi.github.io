@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const notes = (await getCollection('notes')).filter((n) => n.data.lang === 'en' && !n.data.draft).sort((a,b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+---
+<BaseLayout lang="en" title="Notes | Jumpei Yamagishi" switchPath="/ja/notes/">
+  <section>
+    <div class="section-header">
+      <h2>Notes</h2>
+      <div>
+        <h1>Notes</h1>
+        <p class="intro">A lightweight digital garden for research notes, unfinished ideas, and conceptual maps.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Garden</h2>
+      <ul class="note-list">
+        {notes.map((note) => (
+          <li>
+            <span class="status">{note.data.status}</span>
+            <a href={`/en/notes/${note.slug.replace(/\.en$/, '')}/`}>{note.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

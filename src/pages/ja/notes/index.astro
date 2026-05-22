@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const notes = (await getCollection('notes')).filter((n) => n.data.lang === 'ja' && !n.data.draft).sort((a,b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+---
+<BaseLayout lang="ja" title="ノート | 山岸 純平" switchPath="/en/notes/">
+  <section>
+    <div class="section-header">
+      <h2>Notes</h2>
+      <div>
+        <h1>ノート</h1>
+        <p class="intro">研究メモ、未完成のアイデア、概念地図を置くための軽量な digital garden です。</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>Garden</h2>
+      <ul class="note-list">
+        {notes.map((note) => (
+          <li>
+            <span class="status">{note.data.status}</span>
+            <a href={`/ja/notes/${note.slug.replace(/\.ja$/, '')}/`}>{note.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

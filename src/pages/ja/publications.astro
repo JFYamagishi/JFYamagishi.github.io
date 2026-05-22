@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PublicationList from '../../components/PublicationList.astro';
+import { getPublications } from '../../lib/publications';
+const publications = getPublications();
+---
+<BaseLayout lang="ja" title="論文 | 山岸 純平" switchPath="/en/publications/">
+  <section>
+    <div class="section-header">
+      <h2>Publications</h2>
+      <div>
+        <h1>論文</h1>
+        <p class="intro">この一覧は <code>src/data/publications.yaml</code> から自動生成されます。</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2>All</h2>
+      <PublicationList publications={publications} lang="ja" />
+    </div>
+  </section>
+</BaseLayout>

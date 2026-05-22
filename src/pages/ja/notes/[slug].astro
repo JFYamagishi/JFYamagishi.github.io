@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const notes = (await getCollection('notes')).filter((n) => n.data.lang === 'ja' && !n.data.draft);
+  return notes.map((note) => ({
+    params: { slug: note.slug.replace(/\.ja$/, '') },
+    props: { note }
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+---
+<BaseLayout lang="ja" title={`${note.data.title} | 山岸 純平`} switchPath={`/en/notes/${note.slug.replace(/\.ja$/, '')}/`}>
+  <article class="prose">
+    <p class="meta">{note.data.status} · {note.data.date}</p>
+    <h1>{note.data.title}</h1>
+    <p class="intro">{note.data.summary}</p>
+    <Content />
+  </article>
+</BaseLayout>

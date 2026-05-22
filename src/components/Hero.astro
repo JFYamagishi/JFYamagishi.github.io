@@ -1,0 +1,18 @@
+---
+import { text } from '../data/site';
+interface Props { lang: 'en' | 'ja'; }
+const { lang } = Astro.props;
+const t = text[lang];
+---
+<section class="hero" aria-label="Introduction">
+  <h1>{t.title}</h1>
+  <p class="role">{t.role}</p>
+  <p class="intro">{t.intro}</p>
+  <div class="link-row">
+    <a href={`/${lang}/#research`}>{lang === 'en' ? 'Research' : '研究'}</a>
+    <a href={`/${lang}/publications/`}>{lang === 'en' ? 'Publications' : '論文'}</a>
+    <a href={`/${lang}/notes/`}>{lang === 'en' ? 'Notes' : 'ノート'}</a>
+    <a href={`/${lang}/about/`}>{lang === 'en' ? 'About' : 'プロフィール'}</a>
+    <a href="mailto:jumpei.yamagishi@riken.jp">{lang === 'en' ? 'Contact' : '連絡先'}</a>
+  </div>
+</section>

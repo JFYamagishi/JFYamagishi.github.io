@@ -1,0 +1,70 @@
+:root {
+  --bg: #fafafa;
+  --text: #333333;
+  --muted: #707070;
+  --subtle: #d8d8d8;
+  --link: #2f4f6f;
+  --link-hover: #111111;
+  --panel: #f3f3f3;
+  --max-width: 880px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
+}
+
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; transition: color 160ms ease, border-color 160ms ease; }
+a:hover { color: var(--link-hover); border-bottom-color: var(--link-hover); }
+
+.site { width: min(100% - 32px, var(--max-width)); margin: 0 auto; padding: 28px 0 72px; }
+header { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; margin-bottom: 84px; }
+.site-title { font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; }
+.top-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 18px; font-size: 14px; }
+.lang-switch { margin-left: 8px; color: var(--muted); }
+.lang-switch a.active { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+.hero { min-height: 42vh; display: grid; align-content: center; margin-bottom: 84px; }
+h1 { margin: 0 0 20px; font-size: clamp(32px, 7vw, 68px); line-height: 1.04; letter-spacing: -0.06em; font-weight: 500; color: #2f2f2f; }
+.role { margin: 0 0 28px; max-width: 740px; font-size: clamp(18px, 2vw, 24px); line-height: 1.5; color: #3d3d3d; }
+.intro { max-width: 680px; margin: 0; color: var(--muted); font-size: 15px; }
+.link-row { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 34px; font-size: 15px; }
+.link-row a::before { content: "["; color: var(--muted); }
+.link-row a::after { content: "]"; color: var(--muted); }
+
+section { margin: 72px 0; padding-top: 20px; border-top: 1px solid var(--subtle); }
+.section-header { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: start; }
+h2 { margin: 0; font-size: 14px; line-height: 1.4; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.35; font-weight: 500; letter-spacing: -0.02em; color: #303030; }
+p { margin: 0 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.card { padding: 20px; background: var(--panel); border: 1px solid #e9e9e9; border-radius: 14px; }
+.card p, .item p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+.item { padding: 0 0 22px; margin-bottom: 22px; border-bottom: 1px dotted var(--subtle); }
+.item:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+.small-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; font-size: 13px; }
+.note-list { list-style: none; padding: 0; margin: 0; }
+.note-list li { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px dotted var(--subtle); font-size: 14px; }
+.date, .status { color: var(--muted); }
+.prose { max-width: 720px; }
+.prose h1 { font-size: clamp(30px, 5vw, 48px); }
+.prose h2 { margin-top: 44px; margin-bottom: 14px; color: var(--text); font-size: 18px; text-transform: none; letter-spacing: -0.02em; }
+.prose ul { padding-left: 1.25rem; }
+.prose code { background: var(--panel); padding: 0.08rem 0.25rem; border-radius: 4px; }
+footer { margin-top: 96px; padding-top: 24px; border-top: 1px solid var(--subtle); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .site { width: min(100% - 24px, var(--max-width)); padding-top: 20px; }
+  header { flex-direction: column; margin-bottom: 56px; }
+  .top-nav { justify-content: flex-start; }
+  .section-header { grid-template-columns: 1fr; gap: 20px; }
+  .grid { grid-template-columns: 1fr; }
+  .note-list li { grid-template-columns: 1fr; gap: 2px; }
+}

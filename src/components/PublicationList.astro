@@ -1,0 +1,21 @@
+---
+import type { Publication } from '../lib/publications';
+interface Props { publications: Publication[]; lang: 'en' | 'ja'; selectedOnly?: boolean; }
+const { publications, lang, selectedOnly = false } = Astro.props;
+const shown = selectedOnly ? publications.filter((p) => p.selected) : publications;
+---
+<div>
+  {shown.map((pub) => (
+    <div class="item">
+      <div class="meta">{pub.year} · {pub.type}</div>
+      <h3>{pub.title}</h3>
+      <p><strong>{pub.authors}</strong>. {pub.venue}.</p>
+      <p>{pub.summary[lang]}</p>
+      {pub.links && (
+        <div class="small-links">
+          {Object.entries(pub.links).map(([label, href]) => <a href={href}>{label}</a>)}
+        </div>
+      )}
+    </div>
+  ))}
+</div>

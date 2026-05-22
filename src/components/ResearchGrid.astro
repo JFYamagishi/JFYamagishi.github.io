@@ -1,0 +1,25 @@
+---
+interface Props { lang: 'en' | 'ja'; }
+const { lang } = Astro.props;
+const items = lang === 'en'
+  ? [
+      ['Microeconomics of metabolism', 'Metabolism can be viewed as constrained allocation under biochemical, energetic, and environmental limitations. I use ideas from consumer choice theory, shadow prices, and optimization to study cellular resource use.'],
+      ['Thermodynamic control', 'Currency metabolites such as ATP, GTP, NADH, and NADPH act as coupled control variables. I study tradeoffs between energetic controllability, entropy production, and regulatory flexibility.'],
+      ['Universal response relations', 'I develop coarse-grained response theories for metabolic systems, aiming to predict perturbation responses from global constraints rather than molecule-specific details.'],
+      ['Microbial ecosystems', 'I study how fluctuating environments, consumer-resource interactions, and adaptive learning shape community-level dynamics and ecosystem responses.']
+    ]
+  : [
+      ['代謝のミクロ経済学', '代謝を、生化学的・エネルギー的・環境的制約のもとでの資源配分として捉えます。消費者選択理論、シャドウプライス、最適化の考え方を用いて細胞の資源利用を研究しています。'],
+      ['熱力学的制御', 'ATP、GTP、NADH、NADPH などの貨幣分子は、互いに結合した制御変数として働きます。エネルギー状態の制御可能性、エントロピー生成、調節柔軟性のトレードオフを研究しています。'],
+      ['普遍的応答関係', '分子ごとの詳細に依存しすぎず、グローバルな制約から代謝系の摂動応答を予測する粗視化理論を構築しています。'],
+      ['微生物生態系', '揺らぐ環境、consumer-resource 相互作用、適応的学習が、群集レベルのダイナミクスや生態系応答をどのように形づくるかを研究しています。']
+    ];
+---
+<div class="grid">
+  {items.map(([title, body]) => (
+    <div class="card">
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </div>
+  ))}
+</div>

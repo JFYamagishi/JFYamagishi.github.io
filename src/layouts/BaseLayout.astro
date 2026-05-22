@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import { site, nav } from '../data/site';
+
+interface Props {
+  title?: string;
+  lang: 'en' | 'ja';
+  description?: string;
+  switchPath?: string;
+}
+
+const { title = site.name, lang, description = 'Jumpei Yamagishi — theoretical biophysicist.', switchPath } = Astro.props;
+const otherLang = lang === 'en' ? 'ja' : 'en';
+const fallbackSwitch = lang === 'en' ? '/ja/' : '/en/';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <a class="site-title" href={`/${lang}/`}>Jumpei Yamagishi</a>
+        <nav class="top-nav" aria-label="Primary navigation">
+          {nav[lang].map((item) => <a href={item.href}>{item.label}</a>)}
+          <span class="lang-switch" aria-label="Language switcher">
+            <a class={lang === 'en' ? 'active' : ''} href="/en/">en</a>
+            /
+            <a class={lang === 'ja' ? 'active' : ''} href={switchPath ?? fallbackSwitch}>ja</a>
+          </span>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <span>© Jumpei Yamagishi</span>
+        <span>Built with Astro for GitHub Pages.</span>
+      </footer>
+    </div>
+  </body>
+</html>

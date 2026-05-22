@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ResearchGrid from '../../components/ResearchGrid.astro';
+import PublicationList from '../../components/PublicationList.astro';
+import { getPublications } from '../../lib/publications';
+const publications = getPublications();
+---
+<BaseLayout lang="en" title="Jumpei Yamagishi" switchPath="/ja/">
+  <Hero lang="en" />
+  <section id="research">
+    <div class="section-header">
+      <h2>Research</h2>
+      <ResearchGrid lang="en" />
+    </div>
+  </section>
+  <section id="publications">
+    <div class="section-header">
+      <h2>Selected Publications</h2>
+      <PublicationList publications={publications} lang="en" selectedOnly />
+    </div>
+  </section>
+</BaseLayout>
