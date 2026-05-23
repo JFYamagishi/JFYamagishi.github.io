@@ -1,10 +1,10 @@
 export const site = {
-  name: 'Jumpei Yamagishi',
+  name: 'Jumpei F. Yamagishi',
   email: 'jumpei.yamagishi@riken.jp',
   links: {
-    scholar: 'https://scholar.google.com/citations?user=',
-    github: 'https://github.com/',
-    orcid: 'https://orcid.org/'
+    scholar: 'https://scholar.google.com/citations?&user=l9swsksAAAAJ&view_op=list_works&sortby=pubdate',
+    github: 'https://github.com/JFYamagishi',
+    orcid: 'https://orcid.org/0000-0003-2197-9804'
   }
 };
 
@@ -14,31 +14,29 @@ export const nav = {
     { label: 'Publications', href: '/en/publications/' },
     { label: 'Notes', href: '/en/notes/' },
     { label: 'About', href: '/en/about/' },
-    { label: 'CV', href: '/cv.pdf' }
   ],
   ja: [
     { label: '研究', href: '/ja/#research' },
     { label: '論文', href: '/ja/publications/' },
     { label: 'ノート', href: '/ja/notes/' },
     { label: 'プロフィール', href: '/ja/about/' },
-    { label: 'CV', href: '/cv.pdf' }
   ]
 };
 
 export const text = {
   en: {
-    title: 'Jumpei Yamagishi',
-    role: 'Theoretical biophysicist studying cellular metabolism, microbial ecosystems, and biological regulation.',
+    title: 'Jumpei F. Yamagishi',
+    role: 'Theoretical biophysicist studying metabolism and microbial ecosystems.',
     intro:
-      'I work at the interface of nonequilibrium physics, mathematical biology, and economic theory. My research asks how physical constraints, thermodynamic costs, and ecological interactions shape biological decision-making.',
-    current: 'Postdoc Biophysicist at RIKEN',
+      '',
+    current: 'Postdoc at RIKEN',
     contact: 'Contact'
   },
   ja: {
     title: '山岸 純平',
-    role: '細胞代謝・微生物生態系・生物制御を研究する理論生物物理学者です。',
+    role: '理論生物物理学者。',
     intro:
-      '非平衡物理学、数理生物学、経済理論を横断しながら、物理的制約、熱力学的コスト、生態学的相互作用が生物の意思決定や制御をどのように形づくるかを研究しています。',
+      '非平衡物理学、力学系理論、ミクロ経済学を用いて、代謝系や微生物生態系を研究しています。',
     current: '理化学研究所 基礎科学特別研究員',
     contact: '連絡先'
   }

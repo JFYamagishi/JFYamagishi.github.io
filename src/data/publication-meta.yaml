@@ -1,0 +1,100 @@
+currency-coupling:
+  type: preprint
+  selected: true
+  venue: arXiv:2602.01604
+  links:
+    preprint: https://arxiv.org/abs/2602.01604
+  summary:
+    en: A theoretical framework for how the coupling of plural currency metabolites constrain independent control of energetic states and imposes thermodynamic costs.
+    ja: 異なる貨幣分子のカップリングについての理論研究。
+yamagishi2025global:
+  type: peer-reviewed paper
+  selected: true
+  venue: Proceedings of the National Academy of Sciences USA, 122(40), e2515031122
+  links:
+    paper: https://www.pnas.org/doi/10.1073/pnas.2515031122
+  summary:
+    en: A theoretical account of microbial growth laws based on global constraints on intracellular resource allocation.
+    ja: 細胞内の資源配分についてのグローバルな制約の帰結として微生物成長則（収穫逓減則）を説明する理論研究。
+growth-dormancy-transition:
+  type: peer-reviewed paper
+  selected: true
+  venue: Physical Review Letters 132, 118401
+  links:
+    paper: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.132.118401
+  summary:
+    en: A universal mechanism for transitions between growth and dormancy mediated by intermediate complex formation.
+    ja: 中間複合体形成を介した成長-休眠転移に関する理論研究。
+linear-response-metabolism:
+  type: peer-reviewed paper
+  selected: true
+  venue: Physical Review Letters 131, 028401
+  links:
+    paper: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.028401
+    preprint: https://arxiv.org/abs/2210.14508
+  summary:
+    en: A perturbation response theory for metabolism.
+    ja: 代謝状態の栄養応答および阻害剤応答についての「線形応答関係」。
+geometric-speed-limit:
+  type: peer-reviewed paper
+  selected: false
+  venue: Physical Review Research 5, 023127
+  links:
+    paper: https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023127
+  summary:
+    en: 
+    ja: 
+microeconomics-metabolism-warburg:
+  type: peer-reviewed paper
+  selected: false
+  venue: Bulletin of Mathematical Biology 83, 120
+  links:
+    paper: https://link.springer.com/article/10.1007/s11538-021-00959-4
+  summary:
+    en: A consumer-choice view of metabolism, interpreting the Warburg effect as Giffen-like behavior under cellular constraints.
+    ja: 代謝制御を消費者選択として捉え、細胞内制約下の Giffen 的挙動として Warburg 効果を解釈する研究。
+yamagishi2021adaptation:
+  type: peer-reviewed paper
+  selected: false
+  venue: PLoS Computational Biology 17(6), e1009143
+  links:
+    paper: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009143
+  summary:
+    en: 
+    ja: 
+high-dimensional-torus-chaos:
+  type: peer-reviewed paper
+  selected: false
+  venue: Physical Review Research 2, 023044
+  links:
+    paper: https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.023044
+  summary:
+    en: 
+    ja: 
+yamagishi2020advantage:
+  type: peer-reviewed paper
+  selected: false
+  venue: Physical Review Letters 124, 048101
+  links:
+    paper: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.048101
+  summary:
+    en: A theoretical study on how leakage of essential metabolites can become advantageous for cells.
+    ja: 必須代謝物の漏出が細胞にとって有利になり得る原理についての理論研究。
+yamagishi2016symbiotic:
+  type: peer-reviewed paper
+  selected: false
+  venue: PLoS Computational Biology 12(10), e1005042
+  links:
+    paper: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005042
+  summary:
+    en: 
+    ja: 
+microeconomics-of-metabolism-review:
+  type: review article
+  selected: true
+  venue: Economic Principles in Cell Biology, Zenodo
+  links:
+    doi: https://doi.org/10.5281/zenodo.19221188
+  summary:
+    en: An open-access review chapter introducing the "microeconomics of metabolism".
+    ja: 代謝経済学のレビュー。オープンアクセス教科書の一章として寄稿。

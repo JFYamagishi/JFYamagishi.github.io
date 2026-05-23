@@ -3,13 +3,28 @@ import type { Publication } from '../lib/publications';
 interface Props { publications: Publication[]; lang: 'en' | 'ja'; selectedOnly?: boolean; }
 const { publications, lang, selectedOnly = false } = Astro.props;
 const shown = selectedOnly ? publications.filter((p) => p.selected) : publications;
+const selfAuthorName = 'Jumpei F. Yamagishi';
+
+function splitAuthorName(authors: string) {
+  return authors.split(selfAuthorName).flatMap((part, index, array) =>
+    index < array.length - 1
+      ? [part, selfAuthorName]
+      : [part]
+  );
+}
 ---
 <div>
   {shown.map((pub) => (
     <div class="item">
       <div class="meta">{pub.year} · {pub.type}</div>
       <h3>{pub.title}</h3>
-      <p><strong>{pub.authors}</strong>. {pub.venue}.</p>
+      <p>
+        <strong>
+          {splitAuthorName(pub.authors).map((part) =>
+            part === selfAuthorName ? <span class="self-author">{part}</span> : part
+          )}
+        </strong>. {pub.venue}.
+      </p>
       <p>{pub.summary[lang]}</p>
       {pub.links && (
         <div class="small-links">

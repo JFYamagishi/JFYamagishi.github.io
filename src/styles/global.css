@@ -68,3 +68,10 @@ footer { margin-top: 96px; padding-top: 24px; border-top: 1px solid var(--subtle
   .grid { grid-template-columns: 1fr; }
   .note-list li { grid-template-columns: 1fr; gap: 2px; }
 }
+
+
+.self-author {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.08em;
+}

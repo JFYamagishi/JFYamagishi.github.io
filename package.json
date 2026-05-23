@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "latest",
     "astro": "latest",
+    "bibtex-parser": "^0.0.0",
     "yaml": "latest"
-  },
-  "devDependencies": {}
+  }
 }
